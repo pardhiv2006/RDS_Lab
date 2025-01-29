@@ -1,1 +1,61 @@
 
+# Q14. Convert the vector c(2,0.5,1,2,0.5,1,2,0.5,1) to a vector of only 1s, using a 
+#       vector of length 3.
+Vec1 <- c(2,0.5,1,2,0.5,1,2,0.5,1)
+Vec2 <- c(2,0.5,1)
+Vec3 <- as.integer(Vec1 == Vec2)
+print(Vec3)
+
+# Q15. The conversion from a temperature measurement in degrees Fahrenheit(F) to
+#       Celsius(C) is performed using the following equation:  C = 5/9 (F - 32) 
+#       Use vector-oriented behavior in R to convert the temperatures 45, 77, 20, 19,
+#       101,120, and 212 in degrees Fahrenheit to degrees Celsius.
+Feh <- c(45, 77, 20, 19, 101, 120, 212)
+Cel <- c(5/9*(Feh - 32))
+print(Cel)
+
+# Q16. Use the vector c(2,4,6) and the vector c(1,2) in conjunction with rep and
+#       * to produce the vector c(2,4,6,4,8,12).
+V1 <- c(2,4,6)
+V2 <- rep(x = c(1,2), each = 3)
+Sol16 <- V1 * V2
+print(Sol16) 
+
+# Q17. Overwrite the middle four elements of the resulting vector from (Q16.) with 
+#       the two recycled values -0.1 and -100, in that order.
+Sol16[2:(length(Sol16)-1)] <- rep(x = c(-0.1 , -100) , times = 2)
+print(Sol16)
+
+# Q18. Reversed Sequence Creation:
+# Generate and store a sequence of values from 10 to -20 in steps of 0.5. 
+# How can you reverse this sequence efficiently in R without recreating it manually?
+Vect1 <- seq(from = 10 , to = -20 , by = -0.5)
+print(sort(Vect1))
+print(rev(Vect1))
+# rev() function is the best way to reverse a sequence in R.
+
+# 19. Vector Repetition and Order Sorting:
+# For the vector c(-2, 4, -6, 8, -10), describe how to repeat the vector itself three times 
+# and each of its elements 5 times. Following this, how would you sort the resulting vector 
+# from smallest to largest?
+Vect2 <- c(-2, 4, -6, 8, -10)
+Sol19 <- rep(x = Vect2 , times = 3 , each = 5)
+print(Sol19)
+
+# To repeat the vector itself three times and each of its elements 5 times. We can use the 
+# above method
+
+# Q20. Composite Vector Construction:
+# Assemble a vector that includes:
+#   i. A sequence of integers from 15 to 25 (inclusive)
+#   ii. A twofold repetition of the number 4.2
+#   iii. The number -5
+#   iv. A sequence of twelve values starting at 200 and ending at the number which is the 
+#   total length of the vector created in question 2. How would you ensure all components 
+#   are accurately combined?
+Vecti <- 15:25
+Vectii <- rep(x = 4.2 , times = 2)
+Num <- as.integer(-5)
+Vectiii <- seq(from = 200 , to = length(Sol1) , length.out = 12L)
+Sol20 <- c(Vecti , Vectii , Num , Vectiii)
+print(Sol20)
