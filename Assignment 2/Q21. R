@@ -1,1 +1,17 @@
+## 21. Calculate the below operation.
+         3 ([
+               2 5
+               3 7
+               ] − 
+            [
+               5 10
+               15 20])
 
+matrix1 <- matrix(c(2, 5, 3, 7), nrow = 2, ncol = 2, byrow = TRUE)
+matrix2 <- matrix(c(5, 10, 15, 20), nrow = 2, ncol = 2, byrow = TRUE)
+
+result_subtraction <- matrix1 - matrix2
+
+final_result <- 3 * result_subtraction
+
+print(final_result)
