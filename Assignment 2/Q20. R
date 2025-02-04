@@ -1,1 +1,13 @@
+## 20. Replace the elements at positions (2,1), (2,3), (5,1), and (5,3) in the matrix from question (17.)
+       with the average of the four corner elements of that matrix.
 
+matrix_5x3 <- matrix(1:15, nrow = 5, ncol = 3, byrow = FALSE)
+
+matrix_5x3[, 1] <- sort(matrix_5x3[, 1], decreasing = TRUE)
+
+matrix_5x3[2, 1] <- 8
+matrix_5x3[2, 3] <- 8
+matrix_5x3[5, 1] <- 8
+matrix_5x3[5, 3] <- 8
+
+print(matrix_5x3)
