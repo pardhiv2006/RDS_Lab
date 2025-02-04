@@ -1,1 +1,42 @@
+##  8. Store these two matrices:
+        𝐴 = [
+              1
+              2
+              7
+             ], 𝑎𝑛𝑑 
+       𝐵 = [
+              3
+              4
+              8
+            ]
+ Which of the following multiplications are possible? For those that are, compute the result.
+ i. A . B
+ ii. AT
+ . B
+ iii. BT
+ . (A . A
+ T
+ )
+ iv. (A . A
+ T
+ ) . B
+ T
+ v. [(B . B
+ T
+ ) + (A . A
+ T
+ ) - 100I3]
+ -1
 
+A <- matrix(c(1, 2, 7), nrow = 3, ncol = 1)
+B <- matrix(c(3, 4, 8), nrow = 3, ncol = 1)
+
+result_ii <- t(A) %*% B
+print(result_ii)
+
+I3 <- diag(3) * 100
+matrix_v <- (B %*% t(B)) + (A %*% t(A)) - I3
+
+inverse_matrix <- solve(matrix_v)
+
+print(inverse_matrix)
