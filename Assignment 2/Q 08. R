@@ -1,14 +1,10 @@
 ##  8. Store these two matrices:
-        𝐴 = [
-              1
+        𝐴 = [ 1
               2
-              7
-             ], 𝑎𝑛𝑑 
-       𝐵 = [
-              3
+              7 ], 𝑎𝑛𝑑 
+        𝐵 = [ 3
               4
-              8
-            ]
+              8 ]
  Which of the following multiplications are possible? For those that are, compute the result.
  i. A . B
  ii. AT
