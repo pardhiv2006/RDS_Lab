@@ -1,1 +1,26 @@
+## 22. Store these two matrices:
+       𝐴 = [1 2
+             3 4], 𝑎𝑛𝑑 
+       𝐵 = [5
+            6]
+       which of the following multiplications are valid? For valid cases, compute the results.
+        i. C . D
+        ii. CT. D
+        iii. DT. (C . CT)
 
+A <- matrix(c(1,2,3,4),nrow = 2, ncol = 2, byrow = TRUE)
+B <- matrix(c(5,6),nrow = 2, ncol =1)
+C <- A
+D <- B
+result_CD <- C %*% D
+
+print(result_CD)
+
+Ct <- t(C) 
+result_Ct_D <- Ct%*% D
+print(result_Ct_D)
+
+Dt<- t(D) 
+C_Ct <- C %*% t(C) 
+result_Dt_C_Ct <- Dt %*% C_Ct
+print(result_Dt_C_Ct)
