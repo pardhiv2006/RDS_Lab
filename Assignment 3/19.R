@@ -1,5 +1,5 @@
-string1 <- "apple"
-string2 <- "Banana"
+string1 <- "white"
+string2 <- "Blue"
 
 comp1 <- string1 < string2
 comp2 <- string1 > string2  
